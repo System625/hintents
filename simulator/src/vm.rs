@@ -33,4 +33,6 @@ fn is_float_op(op: &Operator) -> bool {
     // trigger the `starts_with` condition.
     let name = format!("{:?}", op);
     name.starts_with("F32") || name.starts_with("F64")
+    let rep = format!("{:?}", op);
+    rep.contains("F32") || rep.contains("F64")
 }
